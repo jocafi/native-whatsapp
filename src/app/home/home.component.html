@@ -1,4 +1,25 @@
-<ActionBar title="Native WhatsApp" class="action-bar"></ActionBar>
+<ActionBar class="action-bar link">
+  <Label text="Native WhatsApp"
+         class="action-bar-title"
+         [class.h1]="platform.isIOS"
+         android:horizontalAlignment="left"
+         ios:horizontalAlignment="center"></Label>
+
+  <ng-container *ngIf="platform.isAndroid">
+
+    <ActionItem text="New group" android.position="popup"></ActionItem>
+    <ActionItem text="New broadcast" android.position="popup"></ActionItem>
+    <ActionItem text="Native WhatsApp Web" android.position="popup"></ActionItem>
+    <ActionItem text="Starred messages" android.position="popup"></ActionItem>
+    <ActionItem text="Settings" android.position="popup"></ActionItem>
+  </ng-container>
+
+  <ng-container *ngIf="platform.isIOS">
+    <ActionItem *ngIf="platform.isIOS" text="Edit1" ios.position="right"></ActionItem>
+    <ActionItem *ngIf="platform.isIOS" text="Edit2" ios.position="left"></ActionItem>
+  </ng-container>
+
+</ActionBar>
 
 <StackLayout>
 </StackLayout>

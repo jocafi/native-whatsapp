@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import * as platform from "tns-core-modules/platform";
 
 @Component({
   selector: 'ns-home',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   moduleId: module.id,
 })
 export class HomeComponent implements OnInit {
+
+  public platform = platform;
 
   constructor() { }
 
