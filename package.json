@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "io.japps.native-whatsapp",
+    "id": "io.japps.NativeWhatsapp",
     "tns-android": {
       "version": "5.0.0"
     },
