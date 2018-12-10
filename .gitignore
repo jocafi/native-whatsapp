@@ -31,3 +31,6 @@ typings/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# css are generated from .scss files by compilation on-demand
+*.css
