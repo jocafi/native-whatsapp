@@ -7,6 +7,7 @@ import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { HomeComponent } from './home/home.component';
 import { TNSFontIconModule } from "nativescript-ngx-fonticon";
+import { TabsComponent } from './home/tabs/tabs.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -30,6 +31,7 @@ import { TNSFontIconModule } from "nativescript-ngx-fonticon";
         ItemsComponent,
         ItemDetailComponent,
         HomeComponent,
+        TabsComponent,
     ],
     providers: [],
     schemas: [
