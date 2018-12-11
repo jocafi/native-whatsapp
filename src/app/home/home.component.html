@@ -7,6 +7,15 @@
 
   <ng-container *ngIf="platform.isAndroid">
 
+    <ActionItem>
+      <!--
+      *ja* you have to add the following npm libraries in order to work with the font icon of Material Design:
+      - nativescript-material-icons
+      - nativescript-ngx-fonticon
+
+      below it replaces the code for text="&#xe8b6;"-->
+      <Label class="mdi action-bar-button" [text]="'mdi-search' | fonticon"></Label>
+    </ActionItem>
     <ActionItem text="New group" android.position="popup"></ActionItem>
     <ActionItem text="New broadcast" android.position="popup"></ActionItem>
     <ActionItem text="Native WhatsApp Web" android.position="popup"></ActionItem>
@@ -15,8 +24,8 @@
   </ng-container>
 
   <ng-container *ngIf="platform.isIOS">
-    <ActionItem *ngIf="platform.isIOS" text="Edit1" ios.position="right"></ActionItem>
-    <ActionItem *ngIf="platform.isIOS" text="Edit2" ios.position="left"></ActionItem>
+    <ActionItem *ngIf="platform.isIOS" ios.position="right" ios.systemIcon="2"></ActionItem>
+    <ActionItem *ngIf="platform.isIOS" ios.position="left" ios.systemIcon="7"></ActionItem>
   </ng-container>
 
 </ActionBar>

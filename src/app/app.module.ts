@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { HomeComponent } from './home/home.component';
+import { TNSFontIconModule } from "nativescript-ngx-fonticon";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -19,7 +20,10 @@ import { HomeComponent } from './home/home.component';
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        TNSFontIconModule.forRoot({
+          'mdi': 'material-design-icons.css'
+        })
     ],
     declarations: [
         AppComponent,
